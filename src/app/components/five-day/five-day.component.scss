@@ -1,0 +1,56 @@
+html{
+  box-sizing: border-box;
+}
+.daysForecast{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  height: 33vh;
+}
+.container-dayWether{
+  width: 18vw;
+  height: 100%;
+  background-color: rgb(221, 226, 226);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  box-sizing: border-box;
+  cursor: pointer;
+  &.active{
+    background-color: rgb(220, 194, 163);
+  }
+}
+.dateOfday, .dayTonight{
+  text-transform: uppercase;
+}
+.dayTonight{
+  color: rgb(6 122 60);
+}
+.dayTonightIcon{
+  height: 30%;
+  display: flex;
+  align-items: center;
+
+}
+.dayTempreture{
+  font-weight: bold;
+  color: rgb(34, 33, 33);
+  font-size: 38px;
+  padding-bottom: 5px;
+}
+.dayTonightDiscription{
+  font-size: 16px;
+  color: rgb(68, 65, 65);
+}
+.container-hourly-five-days{
+  padding: 30px 0px;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-sizing: border-box;
+}

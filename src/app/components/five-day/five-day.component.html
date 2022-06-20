@@ -1,0 +1,27 @@
+<div class="daysForecast">
+  <div class="container-dayWether" let index = "5" (click)="showWeatherOneDay(hourluDetailsDayToday[0].dt_txt, hourluDetailsDayToday[0])" [class.active]="hourluDetailsDayToday[0]===selectedItem">
+    <div class="dayTonight">
+      <p>TONIGHT</p>
+    </div>
+    <div class="dateOfday">{{hourluDetailsDayToday[0].dt_txt | date:"MMM dd"}} </div>
+    <div class="dayIcon">
+      <img src="http://openweathermap.org/img/wn/{{weatherTonightDay.weather[0].icon}}@2x.png">
+    </div>
+    <div class="dayTempreture">{{weatherTonightDay.main.temp | number: '1.0-0'}}&#176;</div>
+    <div class="dayDiscription">{{weatherTonightDay.weather[0].description}}</div>
+  </div>
+  <div class="container-dayWether" *ngFor="let weatherFiveDay of weatherFiveDays; let i=index" (click)="showWeatherOneDay(weatherFiveDay.dt_txt, weatherFiveDay)" [class.active]="weatherFiveDay===selectedItem">
+    <div class="dayTonight">{{weatherFiveDay.dt_txt | date:"EEE"}}
+    </div>
+    <div class="dateOfday">{{weatherFiveDay.dt_txt | date:"MMM dd"}}</div>
+    <div class="dayIcon">
+      <img src="http://openweathermap.org/img/wn/{{weatherFiveDay.weather[0].icon}}@2x.png">
+    </div>
+    <div class="dayTempreture">{{weatherFiveDay.main.temp | number: '1.0-0'}}&#176;</div>
+    <div class="dayDiscription">{{weatherFiveDay.weather[0].description}}</div>
+  </div>
+</div>
+<div class="container-hourly-five-days">
+  <app-hourly-five-days [hourluDetailsOneDay]="hourluDetailsOneDay"></app-hourly-five-days>
+</div>
+

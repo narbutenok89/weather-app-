@@ -1,0 +1,54 @@
+<div class="weather">
+  <div class="mainWhether">
+    <div class="current">
+      <p>CURRENT WEATHER</p>
+      <div class="date"> {{dateToday | date: "dd.MM.yy"}} </div>
+    </div>
+  </div>
+  <div class="moreInformation">
+    <div class="iconWheter">
+      <div class="icon">
+        <img src = "http://openweathermap.org/img/wn/{{data.weather[0].icon}}@2x.png">
+      </div>
+      <div class="kindOfWeather">{{data.weather[0].description}}</div>
+    </div>
+    <div class="temreature">
+      <div class="realTempretuare">{{data.main.temp | number: '1.0-0'}}&#176;</div>
+      <div class="fealTemperatuare">
+        <p>Real feal</p>
+        <span>{{data.main.feels_like | number: '1.0-0'}}&#176;</span>
+      </div>
+    </div>
+    <div class="dayLeangth">
+      <div class="sunrise">
+        <p>Sunrise:</p>
+        <div class="timeSunrise">
+          <span>{{data.sys.sunrise*1000 | date:'HH.mm'}}</span>
+        </div>
+      </div>
+      <div class="sunset">
+        <p>Sunset:</p>
+        <div class="timeSunset">
+          <span>{{data.sys.sunset*1000 | date:'H.mm'}}</span>
+        </div>
+      </div>
+      <div class="duration">
+        <p>Duration:</p>
+        <div class="timeDuration">
+          <span>{{timeDuration | date:'H.mm'}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tempretureToday">
+
+    <app-hourlu-weather [latitude]="latitude"
+                        [longitude]="longitude"
+                        [hourluDetails]="hourluDetails">
+    </app-hourlu-weather>
+
+  </div>
+</div>
+
+
+

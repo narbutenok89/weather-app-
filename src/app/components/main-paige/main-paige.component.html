@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="menu">
+    <input type="button" id="buttonToday" value="Today" (click)="showInfoTodayWeather()" [class.active]="isShowTodayPage">
+    <input type="button" id="buttonForecast" value="5-day forecast" (click)="showInfoFiveDayWeather()" [class.active]="isShowFiveTodayPage">
+  </div>
+
+  <div class="main-page" >
+    <app-error *ngIf="isErrorShow; else loadingPage"></app-error>
+    <ng-template #loadingPage>
+      <app-weather-today [city]="city" *ngIf="isShowTodayPage"
+                       [data]="data"
+                       [hourluDetails]="hourluDetails"
+                       [timeDuration]="timeDuration">
+    </app-weather-today>
+    <app-five-day [hourluDetails]="hourluDetails" *ngIf="isShowFiveTodayPage"></app-five-day>
+    </ng-template>
+  </div>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="container-hourlu" *ngFor=" let hourluDetail of hourluDetailsOneDay">
+  <div class="hourlu-today-time">{{hourluDetail.dt * 1000 | date:'HH:00'}}</div>
+  <div class="hourlu-today-icon">
+    <img src="http://openweathermap.org/img/wn/{{hourluDetail.weather[0].icon}}.png">
+  </div>
+  <div class="hourlu-today-forecast">{{hourluDetail.weather[0].description}}</div>
+  <div class="hourlu-today-temp">{{hourluDetail.main.temp | number: '1.0-0'}}&#176;</div>
+  <div class="hourlu-today-fealTemp">{{hourluDetail.main.feels_like | number: '1.0-0'}}&#176;</div>
+  <p>Real feal</p>
+  <div class="hourlu-today-wind">{{hourluDetail.wind.speed * 3.6 | number: '1.0-1'}} m/c</div>
+</div>
+</div>
+
+

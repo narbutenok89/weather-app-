@@ -1,0 +1,24 @@
+.error{
+  height: 70vh;
+  padding: 10px;
+  background-color: rgb(221, 226, 226);
+
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.iconError{
+  display: flex;
+  align-items: center;
+  P{
+    font-size: 42px;
+    color: rgb(41, 51, 48);
+  }
+}
+.massageError{
+  padding-top: 20px;
+  font-size: 26px;
+}

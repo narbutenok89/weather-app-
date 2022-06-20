@@ -1,0 +1,43 @@
+html{
+  margin: 0px;
+  box-sizing: border-box;
+}
+.menu{
+  width: 100%;
+  height: 6vh;
+  font-size: 16px;
+  background-color: rgb(49 48 48);
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+  #buttonToday, #buttonForecast{
+  width: 12vw;
+  height: 100%;
+  color:white;
+  padding-left: 10px;
+  margin: 0px;
+  background-color: rgb(49 48 48);
+  border: none;
+  font-size: 16px;
+  &.active {
+    border-bottom: 2px solid rgb(22, 147, 79);
+  }
+}
+#buttonToday{
+  border-left: 1px solid rgb(205, 204, 204);
+  border-right: 1px solid rgb(195, 193, 193);
+}
+.main-page{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(../../../assets/image/sky_1.jpeg);
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.8;
+  padding:  20px 20px;
+  box-sizing: border-box;
+}
